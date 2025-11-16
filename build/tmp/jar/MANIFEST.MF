@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: simpleclanchatmanager
+Specification-Vendor: TheBaronBlood
+Specification-Version: 1
+Implementation-Title: SimpleClanChatManager
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor: TheBaronBlood
+Implementation-Timestamp: 2025-11-15T14:18:02+0100
+MixinConfigs: simpleclanchatmanager.mixins.json
+
