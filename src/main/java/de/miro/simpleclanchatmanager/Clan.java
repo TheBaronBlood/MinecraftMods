@@ -37,12 +37,12 @@ public class Clan {
         this.team.setPlayerPrefix(Component.literal("[" + name + "] "));
 
 
-}
+    }
+
     public void setPrefixColor(String colorRGB) {
         this.color = Integer.parseInt(colorRGB, 16);
         this.team.setPlayerPrefix(Component.literal("[" + name + "] ").withStyle(Style.EMPTY.withColor(this.color)));
     }
-
 
 
 }

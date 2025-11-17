@@ -46,7 +46,6 @@ public class Simpleclanchatmanager {
     }
 
 
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
@@ -70,7 +69,6 @@ public class Simpleclanchatmanager {
         fullMessage.append(name).append(": ").append(Component.literal(event.getRawText()));
 
 
-
         event.getPlayer().server.execute(() -> {
             event.getPlayer().server.getPlayerList().broadcastSystemMessage(fullMessage, false);
         });
@@ -82,9 +80,6 @@ public class Simpleclanchatmanager {
         new JoinClan(event.getDispatcher());
         new LeaveClan(event.getDispatcher());
     }
-
-
-
 
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

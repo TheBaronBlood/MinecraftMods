@@ -13,15 +13,15 @@ public class JoinClan {
     public JoinClan(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("clan")
                 .then(Commands.literal("join")
-                .then(Commands.argument("clanName", StringArgumentType.string())
-                        .suggests((context, builder) -> {
-                            Scoreboard scoreboard = context.getSource().getScoreboard();
-                            for (PlayerTeam team : scoreboard.getPlayerTeams()) {
-                                builder.suggest(team.getName());
-                            }
-                            return builder.buildFuture();
-                        })
-                        .executes(this::join))));
+                        .then(Commands.argument("clanName", StringArgumentType.string())
+                                .suggests((context, builder) -> {
+                                    Scoreboard scoreboard = context.getSource().getScoreboard();
+                                    for (PlayerTeam team : scoreboard.getPlayerTeams()) {
+                                        builder.suggest(team.getName());
+                                    }
+                                    return builder.buildFuture();
+                                })
+                                .executes(this::join))));
 
     }
 
