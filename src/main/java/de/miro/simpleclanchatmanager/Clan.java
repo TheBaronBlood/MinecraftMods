@@ -43,6 +43,6 @@ public class Clan {
         this.team.setPlayerPrefix(Component.literal("[" + name + "] ").withStyle(Style.EMPTY.withColor(this.color)));
     }
 
-
+    // wollte nur etwas Testen
 
 }
