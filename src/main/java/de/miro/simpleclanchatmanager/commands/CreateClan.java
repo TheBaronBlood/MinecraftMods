@@ -1,24 +1,22 @@
 package de.miro.simpleclanchatmanager.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import de.miro.simpleclanchatmanager.Clan;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
 
 public class CreateClan {
     public CreateClan(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("clan")
                 .then(Commands.literal("create")
-                .then(Commands.argument("name", StringArgumentType.string())
-                        .executes(this::create)
-                        .then(Commands.argument("color", StringArgumentType.string())
-                                .executes(this::setClanColor)))));
+                        .then(Commands.argument("name", StringArgumentType.string())
+                                .executes(this::create)
+                                .then(Commands.argument("color", StringArgumentType.string())
+                                        .executes(this::setClanColor)))));
 
     }
 
